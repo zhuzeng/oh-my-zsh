@@ -171,8 +171,10 @@ alias glols="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgr
 alias glod="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 alias glods="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
 alias glola="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
-alias glog='git log --oneline --decorate --graph'
-alias gloga='git log --oneline --decorate --graph --all'
+#alias glog='git log --oneline --decorate --graph'
+alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cd)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --date=local"
+alias gloga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cd)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all --date=local"
+alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ci %d"'
 alias glp="_git_log_prettily"
 
 alias gm='git merge'
@@ -221,6 +223,7 @@ alias gsps='git show --pretty=short --show-signature'
 alias gsr='git svn rebase'
 alias gss='git status -s'
 alias gst='git status'
+alias gs='git status'
 
 # use the default stash push on git 2.13 and newer
 autoload -Uz is-at-least

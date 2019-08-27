@@ -5,9 +5,9 @@ if [ "$confirmation" != y ] && [ "$confirmation" != Y ]; then
 fi
 
 echo "Removing ~/.oh-my-zsh"
-if [ -d ~/.oh-my-zsh ]; then
-  rm -rf ~/.oh-my-zsh
-fi
+#if [ -d ~/.oh-my-zsh ]; then
+#  rm -rf ~/.oh-my-zsh
+#fi
 
 echo "Looking for original zsh config..."
 ZSHRC_ORIG=~/.zshrc.pre-oh-my-zsh
