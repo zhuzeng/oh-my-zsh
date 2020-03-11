@@ -177,6 +177,8 @@ alias gloga="git log --graph --abbrev-commit --decorate --format=format:'%C(bold
 alias gtag='git log --tags --simplify-by-decoration --pretty="format:%ci %d"'
 alias glp="_git_log_prettily"
 
+#alias gstat="git ls-files | while read f; do git blame --line-porcelain $f | grep '^author '; done | sort -f | uniq -ic | sort -nr"
+
 alias gm='git merge'
 alias gmom='git merge origin/master'
 alias gmt='git mergetool --no-prompt'
